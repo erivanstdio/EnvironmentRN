@@ -1,4 +1,4 @@
-package com.rnsalon
+package com.salonrn
 
 import android.app.Application
 import com.facebook.react.PackageList
