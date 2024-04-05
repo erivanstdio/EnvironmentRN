@@ -8,26 +8,13 @@ const Stack = createNativeStackNavigator();
 
 export const StackRoutes = () => {
   return (
-    <Stack.Navigator
-      initialRouteName='Drawer'
-      // mode='card'
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: 'grey'
-        },
-        headerBackTitle: 'Go Back',
-        headerTintColor: 'white',
-        // cardStyle: {
-        //   backgroundColor: 'blue'
-        // },
-        headerTitleAlign: 'center'
-      }}>
+    <Stack.Navigator initialRouteName='Drawer'>
       <Stack.Screen
         name="Home"
         component={Home}
         options={{ title: 'Home' }}
       />
-      <Stack.Screen name='Drawer' component={DrawerRoute} options={{ headerShown: false, title: '' }} />
+      <Stack.Screen name='Drawer' component={DrawerRoute} options={{ headerShown: false }} />
       <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   );

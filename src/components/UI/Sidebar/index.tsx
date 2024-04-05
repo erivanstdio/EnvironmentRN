@@ -39,7 +39,7 @@ export const Sidebar: React.FC<Props> = ({navigation}) => {
 		{
 			label: 'Home',
 			icon: 'appstore1',
-			screen: 'Panel',
+			screen: 'Home',
 			typeIcon: 'antDesign',
 			permission: true
 		},
@@ -47,14 +47,14 @@ export const Sidebar: React.FC<Props> = ({navigation}) => {
 			label: 'Profile',
 			icon: 'clipboard-check',
 			typeIcon: 'material',
-			screen: 'Checklists',
+			screen: 'Profile',
 			permission: true
 		},
     {
 			label: 'History',
 			icon: 'clipboard-check',
 			typeIcon: 'material',
-			screen: 'Checklists',
+			screen: 'History',
 			permission: true
 		}
 	];

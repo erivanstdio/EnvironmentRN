@@ -11,14 +11,14 @@ const Drawer = createDrawerNavigator();
 export const DrawerRoute: React.FC = () => (
 <>
     <Drawer.Navigator
-      drawerContent={(props: DrawerContentComponentProps) => <Sidebar {...props} />}
+      // drawerContent={(props: DrawerContentComponentProps) => <Sidebar {...props} />}
       initialRouteName="Home"
     >
       <Drawer.Screen
 				name='Home'
 				component={Home}
 				options={{
-					title: 'SalonRN',
+					title: 'AppName',
 					// headerTitle: function render() {
 					// 	return (
 					// 		<Logo size={3.5} mode='light' />

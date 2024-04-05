@@ -1,8 +1,14 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 
 // import { Container } from './styles';
 
 export const History: React.FC = () => {
-  return <View />;
+  return (
+    <View>
+      <Text>
+        History
+      </Text>
+    </View>
+  );
 }

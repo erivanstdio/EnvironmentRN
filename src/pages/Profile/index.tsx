@@ -6,11 +6,14 @@ import { Text, View } from 'react-native';
 export const Profile: React.FC = () => {
 
   const date = new Date().getDate();
-  return <View>
-      UserName
+
+  return (
     <View>
-      <Text>Date:</Text>
-      <Text>{date}</Text>
+      <Text>UserName</Text>
+      <View>
+        <Text>Date:</Text>
+        <Text>{date}</Text>
+      </View>
     </View>
-  </View>;
+  );
 }
