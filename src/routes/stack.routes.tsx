@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Home } from '../pages/Home';
 import { Profile } from '../pages/Profile';
 import { DrawerRoute } from './drawer.routes';
+import { SearchRepo } from '../pages/SearchRepo';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export const StackRoutes = () => {
       />
       <Stack.Screen name='Drawer' component={DrawerRoute} options={{ headerShown: false }} />
       <Stack.Screen name="Profile" component={Profile} />
+			<Stack.Screen name='SearchRepo' component={SearchRepo} />
     </Stack.Navigator>
   );
 };

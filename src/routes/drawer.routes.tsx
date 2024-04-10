@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { DrawerContentComponentProps, createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Home } from '../pages/Home';
 import { History } from '../pages/History';
 import { Profile } from '../pages/Profile';
-import { Sidebar } from '../components/UI/Sidebar';
+import { SearchRepo } from '../pages/SearchRepo';
 
 const Drawer = createDrawerNavigator();
 
@@ -36,6 +35,25 @@ export const DrawerRoute: React.FC = () => (
 			/>
       <Drawer.Screen name="History" component={History} />
       <Drawer.Screen name="Profile" component={Profile} />
+			<Drawer.Screen name='SearchRepo' 
+				component={SearchRepo}
+				options={{
+					title: 'List Github Repositories',
+					// headerTitle: function render() {
+					// 	return (
+					// 		<Logo size={3.5} mode='light' />
+					// 	);
+					// },
+					headerTitleAlign: 'center',
+					headerStyle: {
+						backgroundColor: '#333',
+						elevation: 0,
+						shadowOpacity: 0,
+						borderBottomWidth: 0
+					},
+					headerTintColor: 'white'
+				}} 
+			/>
     </Drawer.Navigator>
     </>
 );
