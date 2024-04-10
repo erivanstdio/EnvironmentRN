@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
-import { UserListItem } from '../../components/List/UserListItem';
+import { ListItem } from '../../components/List/ListItem';
 import Button from '../../components/UI/Button';
 
 // import { Container } from './styles';
@@ -15,12 +15,13 @@ const users = [
 
 export const Home: React.FC = () => {
   const [showList, setShowList] = useState<boolean>(false);
-  const userList = users.map((user) => <UserListItem key={user.id} user={user.name}/>);
+  const userList = users.map((user) => <ListItem color={'#000'} key={user.id} value={user.name}/>);
 
   const handleShowList = () => {
     setShowList((prev) => !prev);
   }
 
+  // TODO: Simple counter
   return (
     <View>
       <Button title='Display list of Beatles' onPress={handleShowList}/>
@@ -29,7 +30,7 @@ export const Home: React.FC = () => {
         {userList}
       </ScrollView>
       }
-      {/* <FlatList renderItem={(user) => <UserListItem user={user.item.name}/>} data={users}/> */}
+      {/* <FlatList renderItem={(user) => <UserListItem value={user.item.name}/>} data={users}/> */}
      </View>
   );
 }
