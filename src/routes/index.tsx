@@ -5,6 +5,7 @@ import { AuthRoutes } from './auth.routes';
 
 export const Routes: React.FC = () => {
 
+	// TODO: configure user using context
   const user = true;
 
 	return (
