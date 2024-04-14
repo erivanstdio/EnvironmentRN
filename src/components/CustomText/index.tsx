@@ -7,10 +7,12 @@ type Props = {
   fontSize?: number;
 }
 
-const CustomText: React.FC<Props> = ({children, color, fontSize}) => {
-  return <Container>
-    <Text color={color} fontSize={fontSize}>{children}</Text>
-  </Container>;
+const CustomText: React.FC<Props> = ({ children, color, fontSize }) => {
+  return (
+    <Container>
+      <Text testID='CustomText' color={color} fontSize={fontSize}>{children}</Text>
+    </Container>
+  );
 }
 
 export default CustomText;
