@@ -4,7 +4,7 @@ import CustomText from '../../../src/components/CustomText';
 
 test('CustomText', () => {
 
-  const {getByTestId} = render(<CustomText  children={<></>}/>)
+  const { getByTestId } = render(<CustomText children={<></>} />)
 
   expect(getByTestId('CustomText')).toBeTruthy()
 })
