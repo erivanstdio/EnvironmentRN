@@ -4,10 +4,11 @@ import { TextInputProps } from 'react-native';
 
 type InputProps = {
   backgroundColor: string;
-}
-const Input: React.FC<InputProps & TextInputProps> = ({onChangeText, value, backgroundColor}) => {
+} & TextInputProps;
 
-  return <Container backgroundColor={backgroundColor} editable value={value} onChangeText={onChangeText} />;
+const Input: React.FC<InputProps> = ({ ...props }) => {
+
+  return <Container {...props} />;
 }
 
 export default Input;

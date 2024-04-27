@@ -1,6 +1,5 @@
 import React from 'react';
-import { ButtonBox, ButtonContainer } from './styles';
-import { TouchableOpacityProps } from 'react-native';
+import { ButtonBox } from './styles';
 import CustomText from '../../CustomText';
 
 type ButtonProps = {
@@ -8,9 +7,9 @@ type ButtonProps = {
   onPress: () => void;
   color?: string;
 }
-const Button: React.FC<ButtonProps> = ({title, onPress, color}) => {
+const Button: React.FC<ButtonProps> = ({ title, onPress, color }) => {
   return (
-    <ButtonBox onPress={onPress} color={color || '#44f'} activeOpacity={.8}>
+    <ButtonBox accessibilityHint='ButtonComponent' onPress={onPress} color={color || '#44f'} activeOpacity={.8}>
       <CustomText>
         {title}
       </CustomText>

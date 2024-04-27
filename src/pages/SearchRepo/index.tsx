@@ -21,7 +21,7 @@ export const SearchRepo: React.FC = () => {
 
 			const user: Users[] = await useFetchUserRepositories(userName);
 			const repositorieNames = user.map(value => value.name)
-	
+
 			setRepositories(repositorieNames)
 		} else {
 
@@ -36,11 +36,11 @@ export const SearchRepo: React.FC = () => {
 					<CustomText fontSize={18}>
 						Insert Github Username:
 					</CustomText>
-					<Input backgroundColor={'#333'} value={value} onChangeText={setValue} />
+					<Input accessibilityHint='InputSearchRepo' placeholder='Insert a user to fetch his repositories' backgroundColor={'#333'} value={value} onChangeText={setValue} />
 				</Box>
 				<Button color='#333' title='Search Repo' onPress={() => onSubmit(value)} />
 			</Container>
-			<FlatList style={{backgroundColor: '#330044'}} renderItem={(user) => <RepositoryItem value={user.item}/>} data={repositories} />
+			<FlatList style={{ backgroundColor: '#330044' }} renderItem={(user) => <RepositoryItem value={user.item} />} data={repositories} />
 		</>
 	);
 }
