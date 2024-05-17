@@ -20,12 +20,12 @@ export const SearchRepo: React.FC = () => {
 		if (userName) {
 
 			const user: Users[] = await useFetchUserRepositories(userName);
-			const repositorieNames = user.map(value => value.name)
+			const repositorieNames = user.map(value => value.name);
 
-			setRepositories(repositorieNames)
+			setRepositories(repositorieNames);
 		} else {
 
-			setRepositories([])
+			setRepositories([]);
 		}
 	}, []);
 
